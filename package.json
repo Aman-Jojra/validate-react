@@ -1,0 +1,43 @@
+{
+  "name": "validate-react",
+  "version": "1.1.5",
+  "description": "A diffrent and yet simplistic approach of validating input fields in ReactJS with or without Redux and Material-ui",
+  "main": "./dist/validate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "React",
+    "validations",
+    "validation",
+    "Material",
+    "UI",
+    "ReactJS",
+    "React",
+    "JS",
+    "Form",
+    "Validations"
+  ],
+  "author": "Aman Jojra",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aman-Jojra/validate-react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Aman-Jojra/validate-react/issues"
+  },
+  "homepage": "https://github.com/Aman-Jojra/validate-react#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "jest": "^21.2.1",
+    "react": "^16.0.0",
+    "webpack": "^3.8.1"
+  }
+}

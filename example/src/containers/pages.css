@@ -1,0 +1,96 @@
+.App-section {
+  width: 839px;
+  margin: auto;
+  background-color: #fff;
+  padding: 38px 30px 40px 60px;
+  overflow: auto;
+  position: relative;
+  transition: 0.6s opacity ease; }
+  .App-section .section-title {
+    font-size: 22px;
+    text-align: left;
+    color: #4a4a4a;
+    font-weight: normal;
+    margin-top: 50px; }
+
+.page-1 .top {
+  top: 240px; }
+
+.page-1 .bottom {
+  top: 490px; }
+
+.page-1 .details {
+  color: #4a4a4a;
+  font-size: 18px;
+  line-height: 1.11;
+  padding: 20px;
+  clear: both; }
+  .page-1 .details label {
+    float: left; }
+  .page-1 .details .radio-group {
+    float: left;
+    margin-left: 22px; }
+
+.page-inactive {
+  pointer-events: none;
+  opacity: 0.3; }
+
+.page-2 .details {
+  color: #4a4a4a;
+  font-size: 18px;
+  line-height: 1.11;
+  margin-top: 22px;
+  clear: both;
+  overflow: hidden; }
+  .page-2 .details label {
+    float: left; }
+
+.page-2 .radio-group {
+  float: left;
+  margin-left: 22px;
+  width: 300px; }
+
+.page-4 .white {
+  color: #fff; }
+
+.page-4 .file-button .file {
+  display: none; }
+
+.page-5 .summary {
+  width: 600px;
+  border: solid 1px; }
+
+.mb-m {
+  margin-bottom: 20px; }
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px; }
+
+.grid-tile {
+  width: 20%;
+  border: solid 5px #fff;
+  box-sizing: border-box;
+  padding: 7px 9px;
+  background-color: #f5f6f7;
+  text-align: center; }
+
+.grid-img {
+  width: auto;
+  height: 50px;
+  display: block;
+  margin: auto; }
+
+.grid-title {
+  font-size: 14px;
+  margin: 4px auto 7px;
+  display: block;
+  letter-spacing: 0.1px;
+  opacity: 0.7; }
+
+.grid-example {
+  font-size: 11px;
+  display: block;
+  letter-spacing: 0.1px;
+  opacity: 0.7; }

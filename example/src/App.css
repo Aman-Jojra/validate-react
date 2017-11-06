@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700");
+body {
+  font-family: 'Karla', sans-serif; }
+
+.container {
+  background-color: #f6f7f8;
+  color: #4a4a4a;
+  border: solid 1px #4a4a4a;
+  position: absolute;
+  width: 100%;
+  padding-bottom: 60px; }
+
+.header-section {
+  height: 136px;
+  width: 100%;
+  background-color: #fff; }
+  .header-section .icon-container {
+    margin: auto;
+    width: 1024px; }
+    .header-section .icon-container .app-icon {
+      width: 250px;
+      margin: 48px 0 0 45px; }
+    .header-section .icon-container .app-text {
+      float: right; }
+      .header-section .icon-container .app-text span {
+        color: #4a4a4a; }
+
+.material-icons {
+  color: #51B9D1; }
+
+.spinning-loader {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
