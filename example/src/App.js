@@ -11,7 +11,8 @@ import Scroll from 'react-scroll';
 import { api } from './api/api';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import getStateModel from './stateModel';
-import { validateInstance } from 'validate-react';
+// 'validate-react' './validate';
+import { validateInstance } from './validate';
 
 class App extends Component {
   constructor(props) {

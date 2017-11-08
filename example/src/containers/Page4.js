@@ -2,7 +2,8 @@ import './pages.css';
 
 import { List, ListItem } from 'material-ui/List';
 import React, { Component } from 'react';
-import {validate, validationError} from 'validate-react';
+// 'validate-react' '../validate';
+import {ValidationError, validate, validationError} from '../validate';
 
 import Avatar from 'material-ui/Avatar';
 import Checkbox from 'material-ui/Checkbox';
@@ -138,7 +139,8 @@ export default class Page4 extends Component {
           onCheck={this.handleChange}
           {...validate('required', 'confirmed', this.props.currentState.confirmed)}
         />
-        {validationError('confirmed')}
+        
+        <ValidationError name="confirmed"></ValidationError>
         
         <RaisedButton label="Cancel" style={styles.button} />
         <RaisedButton

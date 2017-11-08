@@ -1,6 +1,6 @@
 {
   "name": "validate-react",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "A diffrent and yet simplistic approach of validating input fields in ReactJS with or without Redux and Material-ui",
   "main": "./dist/validate.js",
   "scripts": {

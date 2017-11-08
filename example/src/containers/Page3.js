@@ -1,7 +1,8 @@
 import './pages.css';
 
 import React, { Component } from 'react';
-import {validate, validationError} from 'validate-react';
+// 'validate-react' '../validate';
+import { validate, validationError } from '../validate';
 
 import AutoComplete from 'material-ui/AutoComplete';
 import Chip from 'material-ui/Chip';

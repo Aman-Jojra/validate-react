@@ -48,7 +48,7 @@ In Container/React Page:
 
 ```
 
-import {validate, validationError} from 'validate-react';
+import {validate, validationError, ValidationError} from 'validate-react';
 
 ...
 
@@ -69,6 +69,8 @@ import {validate, validationError} from 'validate-react';
     {...validate('required', 'confirmed', this.props.currentState.confirmed)}
 />
 {validationError('confirmed')}
+or
+<ValidationError name="confirmed"></ValidationError>
 ```
 
 validate - 
