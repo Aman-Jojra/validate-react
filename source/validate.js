@@ -34,6 +34,10 @@ class Validate {
         return this.fieldsCollection.filter(f => !f.ref.valid);
     }
 
+    removeValidation = (key) => {
+        this.fieldsCollection = this.fieldsCollection.filter(f => f.key !== key)
+    }
+
     _onBlur = (_errorState, value) => {
         _errorState.ref.blurred = true;
         this.validate(_errorState.validations, _errorState.key, value);
@@ -146,4 +150,5 @@ export class ValidationError extends React.Component {
 export let validateInstance = new Validate(), 
         validate = validateInstance.validate,
         validateAll = validateInstance.validateAll,
-        validationError = validateInstance.validationError;
+        validationError = validateInstance.validationError,
+        removeValidation = validateInstance.removeValidation;
