@@ -84,7 +84,8 @@ validate -
         }```
     third param - value inside state object
     fourth param - set attribute in case of error - ('errorText' for material-ui design)
-    #### to trigger validate on click, call 
+
+    To trigger validate on click, call 
 
     ```
     let invalidFields = validateInstance.validateAll();
@@ -93,3 +94,5 @@ validate -
       alert("Form Validation failed! Invalid count:- " + this.state.errorModel.inValidFields.length);
     }
     ```
+
+    To remove validation on fields on click, call removeValidation.
