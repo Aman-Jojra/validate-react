@@ -14,12 +14,14 @@ npm install validate-react --save
 
 ### Setting Up
 
-In App.js
+#### In App.js ####
 ```
 import { validateInstance } from 'validate-react';
     constructor(props) {
         super(props);
         this.state = {
+
+            // picks error message from here otherwise use default message
             errorModel: {
                 inValidFields: [],
                 confirmedCheck: 'Please confirm the items!',
@@ -28,71 +30,78 @@ import { validateInstance } from 'validate-react';
                 itemCategory: 'Item Category is required field!'
             }
         };
+        // need state to set errorModel.inValidFields inside state.
         validateInstance.setProps({currentState: this.state, onChange: this.handleChange});
 
     }
-
-    handleChange = (event, scrollMore = 0) => {
-        /* Custom event from select boxes */
+    // Elevated set state method called by validate plugin as well as from other Pages to set state in React way
+    handleChange = event => {
         const target = event.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
         const name = target.name;
         this.setState({
-        [name]: value
+            [name]: value
         });
     };
 
 ```
 
-In Container/React Page:
+
+#### For Container/Component/React Page: ####
 
 ```
 
-import {validate, validationError, ValidationError} from 'validate-react';
+import {validate, ValidationError} from 'validate-react';
 
 ...
-
+// This is material-ui form which display error when errorText attribute present.
 <TextField
-    style={{ width: '24%', float: 'left', margin: '0 12px 0 0' }}
-    floatingLabelText="What’s your first name?*"
     name="firstName"
     value={this.props.currentState.firstName}
     onChange={this.handleChange}
     {...validate('required', 'firstName', this.props.currentState.firstName, 'errorText')}
 />
 <Checkbox
-    label="Please confirm to proceed further *"
-    style={{ marginBottom: 15 }}
+    label="Please confirm to proceed further"
     name="confirmed"
     value={this.props.currentState.confirmed}
     onCheck={this.handleChange}
     {...validate('required', 'confirmed', this.props.currentState.confirmed)}
 />
-{validationError('confirmed')}
-or
 <ValidationError name="confirmed"></ValidationError>
 ```
+#### Spread function parameters #### 
 
-validate - 
-    first param - 'required' or 'email' or 'required email'
-    second param - unique key(name of tag) or `<parent>-${index}-<prop>` for looping tags. eg:          `items-${index}-itemCategory` for 
-        ```{
-            items: [
-                {itemCategory: 'category1'},
-                {itemCategory: 'category2'},
-            ]
-        }```
-    third param - value inside state object
-    fourth param - set attribute in case of error - ('errorText' for material-ui design)
+* First param - *'required'* or *'email'* or *'required email'*
+* Second param - unique `name` for non-iterating fields, `<parent>-${index}-<prop>` for iterating fields 
+    * Iterating fields eg: `items-${index}-itemCategory` for 
+    `{
+        items: [
+            {itemCategory: 'category1'},
+            {itemCategory: 'category2'},
+        ]
+    }`
+* Third param - property in state
+* Fourth param - Error `attribute` of field - ('errorText' for material-ui design)
+    * default `invalid`
 
-    To trigger validate on click, call 
 
-    ```
-    let invalidFields = validateInstance.validateAll();
-    if(invalidFields.length > 0) {
-      console.log('Invalid' + JSON.stringify(invalidFields));
-      alert("Form Validation failed! Invalid count:- " + this.state.errorModel.inValidFields.length);
-    }
-    ```
+#### To trigger validate on click ####
 
-    To remove validation on fields on click, call removeValidation.
+```
+let invalidFields = validateInstance.validateAll();
+if(invalidFields.length > 0) {
+    console.log('Invalid' + JSON.stringify(invalidFields));
+    alert("Form Validation failed! Invalid count:- " + this.state.errorModel.inValidFields.length);
+}
+```
+
+#### To remove validation on fields #### call removeValidation.
+
+```
+import {validate, ValidationError, removeValidation} from 'validate-react';
+...
+
+removeValidation('firstName');
+
+```
