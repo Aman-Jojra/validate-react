@@ -1,6 +1,6 @@
 {
   "name": "validate-react",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "A diffrent and yet simplistic approach of validating input fields in ReactJS with or without Redux and Material-ui",
   "main": "./dist/validate.js",
   "scripts": {
@@ -9,15 +9,12 @@
   },
   "keywords": [
     "React",
-    "validations",
-    "validation",
-    "Material",
-    "UI",
-    "ReactJS",
-    "React",
-    "JS",
-    "Form",
-    "Validations"
+    "React Validations",
+    "React validation",
+    "React form validations",
+    "React form validation",
+    "React Material form Validation",
+    "React Material UI Form Validations"
   ],
   "author": "Aman Jojra",
   "license": "MIT",

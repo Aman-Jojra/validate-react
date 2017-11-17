@@ -1,8 +1,4 @@
 'use strict';
-/**
- * Adds commas to a number
- * call setProps to set current state of App.
- */
 
 import React from 'react';
 
@@ -147,6 +143,7 @@ export class ValidationError extends React.Component {
     }
   }
 
+/* Export Single instance */
 export let validateInstance = new Validate(), 
         validate = validateInstance.validate,
         validateAll = validateInstance.validateAll,
